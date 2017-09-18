@@ -4,12 +4,13 @@ var checkSyntax = require('.')
 
 module.exports = report
 
-function report (entry) {
+function report (entry, pass) {
   var syntaxFailures = checkSyntax(require.resolve(entry))
 
   if (syntaxFailures.length === 0) {
     console.log('Passed:', entry)
-    process.exit(0)
+    if (typeof pass === 'function') return void pass(true)
+    else process.exit(0)
   }
 
   console.log('Failed', entry)
@@ -22,5 +23,6 @@ function report (entry) {
       .join('\n')
   )
 
-  process.exit(1)
+  if (typeof pass === 'function') pass(false)
+  else process.exit(1)
 }

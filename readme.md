@@ -47,9 +47,19 @@ To use the CLI reporter programatically:
 ```js
 var report = require('check-syntax/report')
 var someEntryPoint = 'my/js/file.js'
-report(someEntryPoint) // same as output as check-syntax command
+report(someEntryPoint) // same as output as check-syntax command, will exit immediately 
 ```
 
+If a `pass` callback is supplied, the process won't exit but 
+instead will call the callback with the first arg set to either `true` 
+or `false` based on whether the syntax check was successful.
+
+```js
+report(someEntryPoint, (pass) => {
+  if (pass) console.log('hooray')
+  else console.log('boo')
+})
+```
 
 
 ### License
