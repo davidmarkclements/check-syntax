@@ -1,9 +1,11 @@
 {
   "name": "check-syntax",
   "version": "0.0.0",
-  "description": "",
+  "description": "Checks the syntax of an entry point and it's (application-level) dependencies  as per the currently installed Node version.",
   "main": "index.js",
-  "bin": "./bin.js",
+  "bin": {
+    "check-syntax": "./bin.js"
+  },
   "scripts": {
     "test": "standard"
   },
@@ -17,5 +19,13 @@
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "standard": "^10.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmarkclements/check-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/check-syntax/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/check-syntax#readme"
 }
