@@ -1,6 +1,6 @@
 {
   "name": "check-syntax",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Checks the syntax of an entry point and it's (application-level) dependencies  as per the currently installed Node version.",
   "main": "index.js",
   "bin": {
