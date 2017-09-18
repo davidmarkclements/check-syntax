@@ -18,7 +18,7 @@ function report (entry, pass) {
   console.log(
     syntaxFailures
       .map(function (o) {
-        return '  SyntaxError: ' + o.msg + '\n  Location: ' + o.loc + '\n  Code: ' + o.code
+        return '  SyntaxError: ' + o.msg + '\n  Location: ' + o.loc + '\n  Code: ' + o.code + '\n'
       })
       .join('\n')
   )
