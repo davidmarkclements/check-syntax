@@ -1,0 +1,21 @@
+{
+  "name": "check-syntax",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "pre-commit": "test",
+  "keywords": [],
+  "author": "David Mark Clements <huperekchuno@googlemail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dependency-tree": "^5.11.0"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.3"
+  }
+}
